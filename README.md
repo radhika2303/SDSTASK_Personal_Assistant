@@ -4,6 +4,6 @@ This project aims at creating a Personal Assistant system to store all daily nee
 # Technology Stack Used:-
 1. Python 3.6
 2. Flask 1.1.1
-3. Dash 1.9.1
-4. HTML5
-5. Bootstrap 4
+3. HTML5
+4. Bootstrap 4
+5. JavaScript
