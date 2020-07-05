@@ -19,20 +19,21 @@
         <div class="bg-nav-2 d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
           <h5 class="my-0 mr-md-auto font-weight-normal text-dark">Your Personal Assistant</h5>
           <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Help</a>
-            <a class="p-2 text-dark" href="#">View Profile</a>
+            <a class="p-2 text-dark" href="/help">Help</a>
+            <a class="p-2 text-dark" href="/profile">View Profile</a>
             <a class="p-2 text-dark" href="#">Settings</a>
           </nav>
-          <a class="btn btn-outline-primary text-dark" href="#">Log out</a>
+          <a class="btn btn-outline-primary text-dark" href="/logout">Log out</a>
         </div>
 
         <div class="container">
             <div class ="row">
                 <div class="col-md-4 mt-5">
                     <div class="card">
-                        <div class="card body bg-success">
+                        <div class="card body bg-green">
                             <h2 style="text-align:center;">Expense</h2>
-                            <h4 style="text-align:center;">Rs.50000</h4>
+                            <h4 style="text-align:center;">Click here</h4>
+
                         </div>
 
                     </div>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="col-md-4 mt-5">
                     <div class="card">
-                        <div class="card body bg-danger">
+                        <div class="card body bg-peach">
                             <h2 style="text-align:center;">Birthdays</h2>
                             <h4 style="text-align:center;">Click Here</h4>
                         </div>
@@ -50,17 +51,21 @@
                 </div>
                 <div class="col-md-4 mt-5">
                     <div class="card">
-                        <div class="card body bg-info">
+                        <div class="card body bg-blue">
                             <h2 style="text-align:center;">To-Do List</h2>
-                            <h4 style="text-align:center;">Click Here</h4>
+                            <h4 style="text-align:center;" ><a href="https://todoforpa-app.herokuapp.com/todo"  target="_blank">Add Here</a></h4>
                         </div>
 
                     </div>
 
                 </div>
+
+                <div class="col-md-1">
+
+                </div>
                 <div class="col-md-4 mt-5">
                     <div class="card">
-                        <div class="card body bg-secondary">
+                        <div class="card body bg-grey">
                             <h2 style="text-align:center;">Goals</h2>
                             <h4 style="text-align:center;">Click Here</h4>
                         </div>
@@ -68,18 +73,10 @@
                     </div>
 
                 </div>
-                <div class="col-md-4 mt-5">
-                   <div class="card">
-                        <div class="card body bg-warning">
-                            <h2 style="text-align:center;">Achievements</h2>
-                            <h4 style="text-align:center;">Click Here</h4>
-                        </div>
 
-                    </div>
-                </div>
                 <div class="col-md-4 mt-5">
                     <div class="card">
-                        <div class="card body bg-nav">
+                        <div class="card body bg-nav text-light">
                             <h2 style="text-align:center;">Passwords</h2>
                             <h4 style="text-align:center;">Click Here</h4>
                         </div>
@@ -89,38 +86,6 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 mt-4">
-                    <table class="table table-dark">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">First</th>
-                          <th scope="col">Last</th>
-                          <th scope="col">Handle</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
                 <div class="col-md-3">
 
                 </div>
@@ -143,6 +108,27 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+<!-- Following JS code is for saving the data -->
+<script>
+
+var storedItem = localStorage.getItem("storedItem");
+
+function save(){
+
+var Item = document.getElementById("input").value;
+localStorage.setItem("storedItem", Item);
+document.getElementById("savedText").innerHTML = Item;
+
+}
+function get(){
+
+localStorage.getItem("storedItem");
+
+document.getElementById("openedText").innerHTML = storedItem;
+
+}
+
+</script>
 
 </body>
 </html>
