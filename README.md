@@ -7,3 +7,8 @@ This project aims at creating a Personal Assistant system to store all daily nee
 3. HTML5
 4. Bootstrap 4
 5. JavaScript
+
+
+Here is the link of demo video of the project showing some of its features-
+
+https://youtu.be/CTgp3krCs-E
